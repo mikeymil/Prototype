@@ -1,0 +1,381 @@
+{
+  "page_analysis": {
+    "source_file": "lesson1_page-02.png",
+    "course": "Insomnia",
+    "lesson": 1,
+    "page": 2,
+    "total_panels": 6,
+    "page_narrative": "Introduction of Leo's story - from narrator transition to meeting wife Ali about sleep problems to first therapy appointment"
+  },
+  "panels": [
+    {
+      "panel_id": "INS_L1_P2_01",
+      "position": "top_left",
+      "category": "NARRATOR_SINGLE",
+      "scene_description": "Rebecca (narrator) giving motivational framing about the program requiring commitment",
+      "setting": "Blue gradient background (standard narrator backdrop)",
+      "lighting": "Flat, even",
+      "mood": "Encouraging, direct",
+      "characters": [
+        {
+          "name": "Rebecca",
+          "role": "narrator",
+          "gender": "female",
+          "ethnicity": "South Asian",
+          "approximate_age": "35-45",
+          "emotion": "positive",
+          "expression": "Earnest, slightly raised eyebrows, open mouth mid-speech, friendly",
+          "pose": "Facing viewer, one hand raised with open palm in explanatory gesture",
+          "clothing": "Pink blazer over white top, teal drop earrings",
+          "position_in_frame": "center-left",
+          "is_speaking": true
+        }
+      ],
+      "speech_bubbles": [
+        "As cliché as it sounds - what you put in, is what you get out. The strategies described in this program are not complex. However, it does take motivation to put the strategies into place and to stick to them for several weeks.",
+        "We recommend that you consider the next couple of months as \"boot camp\" for your sleep.",
+        "Our courses have been shown to be highly effective, however the benefit is much less in those people who don't complete all of the lessons in the course."
+      ],
+      "therapeutic_elements": [],
+      "narrative_stage": "introduction",
+      "therapeutic_skill": "psychoeducation_motivation",
+      "locked_elements": [
+        "speech bubble content",
+        "motivational messaging",
+        "professional narrator presentation"
+      ],
+      "adaptable_elements": [
+        "narrator demographics (gender, ethnicity)",
+        "clothing colors",
+        "earring style"
+      ],
+      "transformation_notes": {
+        "complexity": "LOW",
+        "single_character": true,
+        "no_interaction": true,
+        "simple_background": true
+      }
+    },
+    {
+      "panel_id": "INS_L1_P2_02",
+      "position": "top_right",
+      "category": "NARRATOR_SINGLE",
+      "scene_description": "Rebecca transitioning to introduce Leo's story",
+      "setting": "Blue gradient background",
+      "lighting": "Flat, even",
+      "mood": "Transitional, inviting",
+      "characters": [
+        {
+          "name": "Rebecca",
+          "role": "narrator",
+          "gender": "female",
+          "ethnicity": "South Asian",
+          "approximate_age": "35-45",
+          "emotion": "positive",
+          "expression": "Friendly smile, welcoming",
+          "pose": "Slight turn, gesturing to introduce the story",
+          "clothing": "Pink blazer over white top, teal earrings",
+          "position_in_frame": "center",
+          "is_speaking": true
+        }
+      ],
+      "speech_bubbles": [
+        "Ok, it's time to meet Leo and get started with Lesson 1."
+      ],
+      "therapeutic_elements": [],
+      "narrative_stage": "transition",
+      "therapeutic_skill": "narrative_framing",
+      "locked_elements": [
+        "transition to Leo's story",
+        "welcoming tone"
+      ],
+      "adaptable_elements": [
+        "narrator demographics"
+      ],
+      "transformation_notes": {
+        "complexity": "LOW",
+        "name_reference": "Leo mentioned in speech - would need text change for client name variant"
+      }
+    },
+    {
+      "panel_id": "INS_L1_P2_03",
+      "position": "middle_left",
+      "category": "DIALOGUE_DOMESTIC",
+      "scene_description": "Leo sitting on bed edge expressing frustration about sleep, Ali standing nearby showing concern",
+      "setting": "Bedroom - bed with grey bedding, nightstands with lamps, window with blinds, beige/brown walls",
+      "lighting": "Warm indoor morning/evening light",
+      "mood": "Frustrated, intimate domestic concern",
+      "characters": [
+        {
+          "name": "Leo",
+          "role": "client",
+          "gender": "male",
+          "ethnicity": "Caucasian",
+          "approximate_age": "45-55",
+          "emotion": "distressed",
+          "expression": "Tired, hand on head showing frustration, furrowed brow",
+          "pose": "Sitting on edge of bed, hunched posture, one hand to head",
+          "clothing": "White tank top, blue and white striped pajama pants, barefoot",
+          "position_in_frame": "left-center",
+          "is_speaking": true
+        },
+        {
+          "name": "Ali",
+          "role": "partner",
+          "gender": "female",
+          "ethnicity": "Caucasian",
+          "approximate_age": "40-50",
+          "emotion": "concerned",
+          "expression": "Worried, attentive, looking at Leo",
+          "pose": "Standing near bed, body turned toward Leo, gesturing while speaking",
+          "clothing": "Light blue/teal top, blue knee-length skirt",
+          "position_in_frame": "right",
+          "is_speaking": true
+        }
+      ],
+      "speech_bubbles": [
+        "Another awful sleep - It's like I've lost my ability to sleep, Ali.",
+        "I know, hon. I heard you tossing and turning and saw you on your phone at 3am."
+      ],
+      "therapeutic_elements": [],
+      "narrative_stage": "problem_introduction",
+      "therapeutic_skill": "psychoeducation",
+      "locked_elements": [
+        "frustrated client emotional state",
+        "supportive partner dynamic",
+        "bedroom setting",
+        "body language showing distress"
+      ],
+      "adaptable_elements": [
+        "client demographics (Leo → Leah)",
+        "partner demographics (could become male partner)",
+        "bedroom decor details",
+        "clothing styles"
+      ],
+      "transformation_notes": {
+        "complexity": "MEDIUM",
+        "two_character_interaction": true,
+        "relationship_dynamic_must_preserve": "supportive partner concerned about client's sleep",
+        "gender_swap_considerations": "If Leo becomes female, Ali could remain female (same-sex couple) or become male partner"
+      }
+    },
+    {
+      "panel_id": "INS_L1_P2_04",
+      "position": "middle_right",
+      "category": "DIALOGUE_DOMESTIC",
+      "scene_description": "Continuation of bedroom conversation, Leo explaining symptoms, Ali concerned",
+      "setting": "Same bedroom",
+      "lighting": "Same warm indoor",
+      "mood": "Explanatory, concerned",
+      "characters": [
+        {
+          "name": "Leo",
+          "role": "client",
+          "gender": "male",
+          "ethnicity": "Caucasian",
+          "approximate_age": "45-55",
+          "emotion": "struggling",
+          "expression": "Explaining, slightly less distressed, looking at Ali",
+          "pose": "Still seated on bed edge, hands more animated in explanation",
+          "clothing": "Same pajamas",
+          "position_in_frame": "left",
+          "is_speaking": true
+        },
+        {
+          "name": "Ali",
+          "role": "partner",
+          "gender": "female",
+          "ethnicity": "Caucasian",
+          "approximate_age": "40-50",
+          "emotion": "concerned",
+          "expression": "Listening, questioning",
+          "pose": "Standing, turned toward Leo",
+          "clothing": "Same outfit",
+          "position_in_frame": "right",
+          "is_speaking": true
+        }
+      ],
+      "speech_bubbles": [
+        "Yeah, I woke up at 2am and just couldn't get back to sleep.",
+        "Were you worried about anything?"
+      ],
+      "therapeutic_elements": [],
+      "narrative_stage": "problem_elaboration",
+      "therapeutic_skill": "psychoeducation",
+      "locked_elements": [
+        "symptom description",
+        "partner inquiry about worry/anxiety link"
+      ],
+      "adaptable_elements": [
+        "character demographics"
+      ],
+      "transformation_notes": {
+        "complexity": "MEDIUM",
+        "continuity_with": "INS_L1_P2_03"
+      }
+    },
+    {
+      "panel_id": "INS_L1_P2_05",
+      "position": "bottom_left",
+      "category": "DIALOGUE_DOMESTIC",
+      "scene_description": "Leo expressing hopelessness about sleep, Ali suggesting professional help",
+      "setting": "Same bedroom, slightly different angle showing more of room",
+      "lighting": "Same warm indoor",
+      "mood": "Hopeless turning to potentially hopeful",
+      "characters": [
+        {
+          "name": "Leo",
+          "role": "client",
+          "gender": "male",
+          "ethnicity": "Caucasian",
+          "approximate_age": "45-55",
+          "emotion": "struggling",
+          "expression": "Frustrated, gesturing while explaining failed attempts",
+          "pose": "Seated, hands raised in frustrated gesture",
+          "clothing": "Same - tank top visible, pajama pants",
+          "position_in_frame": "left",
+          "is_speaking": true
+        },
+        {
+          "name": "Ali",
+          "role": "partner",
+          "gender": "female",
+          "ethnicity": "Caucasian",
+          "approximate_age": "40-50",
+          "emotion": "hopeful",
+          "expression": "Suggesting, helpful",
+          "pose": "Standing, hand gesture suggesting/offering",
+          "clothing": "Same outfit",
+          "position_in_frame": "right",
+          "is_speaking": true
+        }
+      ],
+      "speech_bubbles": [
+        "Nothing major. I have that meeting at work today but I'm not too worried about it really. I'm just sick of not sleeping properly. I woke up, saw it was 2am and just thought, here we go again. Another bad sleep, another hopeless day tomorrow.",
+        "Do you think you should see someone about it?",
+        "I don't know. It's been like this for so long. Can anyone really help? I know about cutting out caffeine and all that stuff. Nothing seems to work.",
+        "You don't have much to lose. Why don't you see that psychologist Jon told you about?"
+      ],
+      "therapeutic_elements": [
+        {
+          "type": "narrative_device",
+          "description": "Partner suggesting professional help - models help-seeking behavior",
+          "therapeutic_purpose": "Normalizing seeking professional help for sleep problems"
+        }
+      ],
+      "narrative_stage": "catalyst_for_change",
+      "therapeutic_skill": "psychoeducation",
+      "locked_elements": [
+        "hopelessness expression",
+        "partner suggesting professional help",
+        "resistance then openness arc"
+      ],
+      "adaptable_elements": [
+        "character demographics",
+        "specific friend name (Jon)"
+      ],
+      "transformation_notes": {
+        "complexity": "MEDIUM-HIGH",
+        "multiple_speech_bubbles": true,
+        "important_therapeutic_moment": "Decision to seek help"
+      }
+    },
+    {
+      "panel_id": "INS_L1_P2_06",
+      "position": "bottom_right",
+      "category": "DIALOGUE_THERAPY",
+      "scene_description": "First meeting between Leo and Ian (psychologist) in therapy office",
+      "setting": "Therapy office - desk, bookshelf visible, plant, wooden furniture, window with blinds",
+      "lighting": "Warm professional indoor lighting",
+      "mood": "Professional, hopeful, first meeting",
+      "characters": [
+        {
+          "name": "Ian",
+          "role": "therapist",
+          "gender": "male",
+          "ethnicity": "Caucasian",
+          "approximate_age": "55-65",
+          "emotion": "positive",
+          "expression": "Warm, welcoming, professional smile",
+          "pose": "Seated at desk, leaning forward slightly, open welcoming gesture",
+          "clothing": "Light blue button-down shirt, glasses",
+          "position_in_frame": "left-foreground",
+          "is_speaking": true
+        },
+        {
+          "name": "Leo",
+          "role": "client",
+          "gender": "male",
+          "ethnicity": "Caucasian",
+          "approximate_age": "45-55",
+          "emotion": "neutral",
+          "expression": "Attentive, slightly nervous, hopeful",
+          "pose": "Seated across from therapist",
+          "clothing": "White/light collared shirt",
+          "position_in_frame": "right-background",
+          "is_speaking": true
+        }
+      ],
+      "speech_bubbles": [
+        "Great to meet you, Leo.",
+        "I figured Ali was right so I made an appointment with the psychologist.",
+        "I used to be a pretty good sleeper but my trouble started after my second child was born."
+      ],
+      "therapeutic_elements": [
+        {
+          "type": "narrative_device",
+          "description": "First therapy session - establishing therapeutic relationship",
+          "therapeutic_purpose": "Modeling positive first therapy experience, reducing stigma"
+        }
+      ],
+      "narrative_stage": "entering_treatment",
+      "therapeutic_skill": "therapeutic_alliance",
+      "locked_elements": [
+        "professional therapy setting",
+        "warm therapist welcome",
+        "client beginning to share history",
+        "therapeutic spatial arrangement"
+      ],
+      "adaptable_elements": [
+        "client demographics (Leo)",
+        "therapist demographics (Ian) - with caution",
+        "office decor details"
+      ],
+      "transformation_notes": {
+        "complexity": "MEDIUM",
+        "therapeutic_relationship": "Must preserve warm, professional dynamic",
+        "therapist_transformation": "Could change therapist demographics but must maintain professional, warm presentation",
+        "text_dependencies": "Leo's name mentioned, Ali mentioned, 'second child' - family context"
+      }
+    }
+  ],
+  "page_transformation_summary": {
+    "total_characters_to_transform": {
+      "Leo": 4,
+      "Ali": 3,
+      "Rebecca": 2,
+      "Ian": 1
+    },
+    "panel_complexity_breakdown": {
+      "LOW": 2,
+      "MEDIUM": 3,
+      "MEDIUM-HIGH": 1
+    },
+    "text_elements_requiring_update": [
+      "Names in speech bubbles if doing name changes (Leo, Ali, Jon)",
+      "Family references ('second child') if adjusting family context"
+    ],
+    "recommended_transformation_approach": {
+      "gender_swap_client": {
+        "Leo_to_Leah": true,
+        "Ali_to_male_partner": "Optional - could keep same-sex couple or swap to male",
+        "name_changes_in_text": ["Leo → Leah", "Ali → Alex (if swapping)"]
+      },
+      "ethnicity_variant": {
+        "apply_to": ["Leo", "Ali"],
+        "keep_unchanged": ["Rebecca", "Ian"],
+        "rationale": "Client and partner represent the user's story; narrator and therapist are guide figures"
+      }
+    }
+  }
+}

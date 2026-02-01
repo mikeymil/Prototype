@@ -1,0 +1,458 @@
+[
+  {
+    "panel_id": "insomnia_L1_P1_narrator_intro",
+    "category": "narrator_single",
+    "metadata": {
+      "panel_id": "insomnia_L1_P1_narrator_intro",
+      "source_file": "lesson1_page-01.png",
+      "page_number": 1,
+      "panel_position": "top_left",
+      "category": "PanelCategory.NARRATOR_SINGLE",
+      "scene_description": "Course narrator Rebecca welcomes user to the sleep program",
+      "setting": "neutral background with blue gradient",
+      "lighting": "soft, even studio lighting",
+      "mood": "warm, welcoming, professional",
+      "characters": [
+        {
+          "role": "CharacterRole.NARRATOR",
+          "name": "Rebecca",
+          "gender": "female",
+          "approximate_age": "middle_aged",
+          "emotion": "EmotionBand.POSITIVE",
+          "expression_description": "friendly smile, open expression, making eye contact",
+          "pose_description": "facing viewer, hand raised in welcoming gesture",
+          "clothing_description": "pink blazer over white top, teal earrings",
+          "position_in_frame": "center",
+          "is_speaking": true
+        }
+      ],
+      "narrative_stage": "introduction",
+      "therapeutic_skill": "psychoeducation",
+      "therapeutic_elements": [],
+      "speech_bubbles": [
+        "Welcome to the online Sleep program!",
+        "My name is Rebecca and I'll be helping you navigate through this four-lesson course, developed to help you improve your sleep."
+      ],
+      "text_overlays": [],
+      "locked_elements": [
+        "speech bubble content",
+        "welcoming gesture",
+        "professional appearance"
+      ],
+      "adaptable_elements": [
+        "character demographics",
+        "clothing colors"
+      ],
+      "required_emotion_preservation": true,
+      "required_composition_preservation": true,
+      "requires_clinical_review": false
+    },
+    "transform_spec": {
+      "source_panel_id": "insomnia_L1_P1_narrator_intro",
+      "target_variant": "gender_swap_female",
+      "character_transforms": {},
+      "preserve_pose": true,
+      "preserve_expression_type": true,
+      "preserve_composition": true,
+      "preserve_lighting": true,
+      "preserve_therapeutic_elements": true,
+      "controlnet_mode": "lineart",
+      "controlnet_strength": 0.8,
+      "denoise_strength": 0.4,
+      "min_structural_similarity": 0.8,
+      "emotion_must_match": true
+    },
+    "prompts": {
+      "positive_prompt": "Professional illustration in clean vector style with consistent line weights, \nflat color fills with subtle gradients for shading, warm but professional color palette. \nStyle matches THIS WAY UP CBT course illustrations.\n\nScene:\nClinical therapy illustration depicting: Course narrator Rebecca welcomes user to the sleep program\nSetting: neutral background with blue gradient\nLighting: soft, even studio lighting\nMood: warm, welcoming, professional\n\nCharacters:\nRebecca: female, middle_aged, expression showing positive (friendly smile, open expression, making eye contact), facing viewer, hand raised in welcoming gesture, wearing pink blazer over white top, teal earrings, positioned center\n\nTherapeutic elements to preserve:\nNone specific",
+      "negative_prompt": "photorealistic, 3d render, photograph, blurry, low quality, \ndistorted faces, extra limbs, violence, gore, nsfw, weapons, blood, \nmedical emergency, self-harm, disturbing imagery, scary, horror",
+      "controlnet_prompt": "Use lineart ControlNet at strength 0.8.\nDenoise strength: 0.4\nPreserve exact composition and pose from source image.\nCharacter positions and spatial relationships must match source exactly.",
+      "validation_notes": "Structural similarity must be >= 0.8\nCharacter emotions must match source panel\nAll therapeutic elements must be present and correct\nComposition and pose must match source",
+      "generation_params": {
+        "controlnet_mode": "lineart",
+        "controlnet_strength": 0.8,
+        "denoise_strength": 0.4
+      }
+    },
+    "validation_prompt": "Compare the source and generated images for this therapy panel transformation.\n\n## Source Panel Description\nPanel: insomnia_L1_P1_narrator_intro\nCategory: narrator_single\nScene: Course narrator Rebecca welcomes user to the sleep program\nCharacters: Rebecca (positive)\nTherapeutic elements: \nLocked elements: speech bubble content, welcoming gesture, professional appearance\n\n## Intended Transformation\nVariant: gender_swap_female\nCharacter changes: {}\nControlNet mode: lineart\nExpected similarity: >= 0.8\n\n## Validation Checklist\n\n### 1. Structural Fidelity\n- Does the composition match the source? (character positions, scene layout)\n- Are all required elements present in the same locations?\n- Rate structural similarity: 0-100\n\n### 2. Character Transformation\n- Was the demographic transformation applied correctly?\n- Does the transformed character still convey the same emotion?\n- Is the pose preserved accurately?\n- Rate transformation accuracy: 0-100\n\n### 3. Therapeutic Element Preservation  \n- Are all therapeutic elements (thought bubbles, diagrams, etc.) present?\n- Is their content accurate and readable?\n- Rate therapeutic fidelity: 0-100\n\n### 4. Style Consistency\n- Does the output match the TWU illustration style?\n- Are line weights, colors, and shading consistent?\n- Rate style match: 0-100\n\n### 5. Clinical Safety\n- Any inappropriate or potentially harmful content?\n- Any unintended changes that could affect therapeutic message?\n- Pass/Fail with explanation\n\n### 6. Overall Assessment\n- Overall quality score: 0-100\n- Recommendation: APPROVE / REVISE / REJECT\n- Specific issues to address (if any)\n\nRespond in JSON format."
+  },
+  {
+    "panel_id": "insomnia_L1_P2_therapy_intro",
+    "category": "dialogue_therapy",
+    "metadata": {
+      "panel_id": "insomnia_L1_P2_therapy_intro",
+      "source_file": "lesson1_page-02.png",
+      "page_number": 2,
+      "panel_position": "bottom_left",
+      "category": "PanelCategory.DIALOGUE_THERAPY",
+      "scene_description": "Leo meets his psychologist Ian for the first time in the therapy office",
+      "setting": "therapy office with bookshelf, plant, wooden desk",
+      "lighting": "warm indoor lighting, natural light from window",
+      "mood": "professional, hopeful, first meeting",
+      "characters": [
+        {
+          "role": "CharacterRole.THERAPIST",
+          "name": "Ian",
+          "gender": "male",
+          "approximate_age": "older",
+          "emotion": "EmotionBand.POSITIVE",
+          "expression_description": "warm professional smile, attentive expression",
+          "pose_description": "seated at desk, leaning slightly forward, open body language",
+          "clothing_description": "light blue button-down shirt, glasses",
+          "position_in_frame": "right",
+          "is_speaking": true
+        },
+        {
+          "role": "CharacterRole.CLIENT",
+          "name": "Leo",
+          "gender": "male",
+          "approximate_age": "middle_aged",
+          "emotion": "EmotionBand.NEUTRAL",
+          "expression_description": "attentive, slightly uncertain, listening",
+          "pose_description": "seated across from therapist, hands visible",
+          "clothing_description": "casual collared shirt",
+          "position_in_frame": "left",
+          "is_speaking": false
+        }
+      ],
+      "narrative_stage": "problem_introduction",
+      "therapeutic_skill": "psychoeducation",
+      "therapeutic_elements": [],
+      "speech_bubbles": [
+        "Great to meet you, Leo."
+      ],
+      "text_overlays": [],
+      "locked_elements": [
+        "therapy office setting",
+        "professional therapeutic relationship dynamic",
+        "spatial arrangement"
+      ],
+      "adaptable_elements": [
+        "client demographics",
+        "client clothing",
+        "office decor details"
+      ],
+      "required_emotion_preservation": true,
+      "required_composition_preservation": true,
+      "requires_clinical_review": false
+    },
+    "transform_spec": {
+      "source_panel_id": "insomnia_L1_P2_therapy_intro",
+      "target_variant": "gender_swap_female",
+      "character_transforms": {
+        "Leo": {
+          "gender": "female",
+          "new_name": "Leah",
+          "appearance_notes": "Transform to female presentation while preserving age, expression, and pose",
+          "preserve_emotion": "neutral",
+          "preserve_pose": "seated across from therapist, hands visible"
+        }
+      },
+      "preserve_pose": true,
+      "preserve_expression_type": true,
+      "preserve_composition": true,
+      "preserve_lighting": true,
+      "preserve_therapeutic_elements": true,
+      "controlnet_mode": "openpose",
+      "controlnet_strength": 0.75,
+      "denoise_strength": 0.45,
+      "min_structural_similarity": 0.8,
+      "emotion_must_match": true
+    },
+    "prompts": {
+      "positive_prompt": "Professional illustration in clean vector style with consistent line weights, \nflat color fills with subtle gradients for shading, warm but professional color palette. \nStyle matches THIS WAY UP CBT course illustrations.\n\nScene:\nClinical therapy illustration depicting: Leo meets his psychologist Ian for the first time in the therapy office\nSetting: therapy office with bookshelf, plant, wooden desk\nLighting: warm indoor lighting, natural light from window\nMood: professional, hopeful, first meeting\n\nCharacters:\nIan: male, older, expression showing positive (warm professional smile, attentive expression), seated at desk, leaning slightly forward, open body language, wearing light blue button-down shirt, glasses, positioned right\nLeah: female, middle_aged, expression showing neutral (attentive, slightly uncertain, listening), seated across from therapist, hands visible, wearing casual collared shirt, positioned left\n\nTherapeutic elements to preserve:\nNone specific",
+      "negative_prompt": "photorealistic, 3d render, photograph, blurry, low quality, \ndistorted faces, extra limbs, violence, gore, nsfw, weapons, blood, \nmedical emergency, self-harm, disturbing imagery, scary, horror",
+      "controlnet_prompt": "Use openpose ControlNet at strength 0.75.\nDenoise strength: 0.45\nPreserve exact composition and pose from source image.\nCharacter positions and spatial relationships must match source exactly.",
+      "validation_notes": "Structural similarity must be >= 0.8\nCharacter emotions must match source panel\nAll therapeutic elements must be present and correct\nComposition and pose must match source\nVerify character transformations applied: ['Leo']",
+      "generation_params": {
+        "controlnet_mode": "openpose",
+        "controlnet_strength": 0.75,
+        "denoise_strength": 0.45
+      }
+    },
+    "validation_prompt": "Compare the source and generated images for this therapy panel transformation.\n\n## Source Panel Description\nPanel: insomnia_L1_P2_therapy_intro\nCategory: dialogue_therapy\nScene: Leo meets his psychologist Ian for the first time in the therapy office\nCharacters: Ian (positive), Leo (neutral)\nTherapeutic elements: \nLocked elements: therapy office setting, professional therapeutic relationship dynamic, spatial arrangement\n\n## Intended Transformation\nVariant: gender_swap_female\nCharacter changes: {\n  \"Leo\": {\n    \"gender\": \"female\",\n    \"new_name\": \"Leah\",\n    \"appearance_notes\": \"Transform to female presentation while preserving age, expression, and pose\",\n    \"preserve_emotion\": \"neutral\",\n    \"preserve_pose\": \"seated across from therapist, hands visible\"\n  }\n}\nControlNet mode: openpose\nExpected similarity: >= 0.8\n\n## Validation Checklist\n\n### 1. Structural Fidelity\n- Does the composition match the source? (character positions, scene layout)\n- Are all required elements present in the same locations?\n- Rate structural similarity: 0-100\n\n### 2. Character Transformation\n- Was the demographic transformation applied correctly?\n- Does the transformed character still convey the same emotion?\n- Is the pose preserved accurately?\n- Rate transformation accuracy: 0-100\n\n### 3. Therapeutic Element Preservation  \n- Are all therapeutic elements (thought bubbles, diagrams, etc.) present?\n- Is their content accurate and readable?\n- Rate therapeutic fidelity: 0-100\n\n### 4. Style Consistency\n- Does the output match the TWU illustration style?\n- Are line weights, colors, and shading consistent?\n- Rate style match: 0-100\n\n### 5. Clinical Safety\n- Any inappropriate or potentially harmful content?\n- Any unintended changes that could affect therapeutic message?\n- Pass/Fail with explanation\n\n### 6. Overall Assessment\n- Overall quality score: 0-100\n- Recommendation: APPROVE / REVISE / REJECT\n- Specific issues to address (if any)\n\nRespond in JSON format."
+  },
+  {
+    "panel_id": "insomnia_L1_P3_bed_distress",
+    "category": "client_single",
+    "metadata": {
+      "panel_id": "insomnia_L1_P3_bed_distress",
+      "source_file": "lesson1_page-03.png",
+      "page_number": 3,
+      "panel_position": "top_right",
+      "category": "PanelCategory.CLIENT_SINGLE",
+      "scene_description": "Leo lying awake in bed at night, unable to sleep, showing distress",
+      "setting": "bedroom at night, dark with bedside lamp glow",
+      "lighting": "dim nighttime, warm lamp light on face",
+      "mood": "frustrated, exhausted, anxious",
+      "characters": [
+        {
+          "role": "CharacterRole.CLIENT",
+          "name": "Leo",
+          "gender": "male",
+          "approximate_age": "middle_aged",
+          "emotion": "EmotionBand.DISTRESSED",
+          "expression_description": "tired eyes, furrowed brow, hand on forehead showing frustration",
+          "pose_description": "lying in bed, head on pillow, one hand raised to forehead",
+          "clothing_description": "sleepwear/t-shirt",
+          "position_in_frame": "center",
+          "is_speaking": false
+        }
+      ],
+      "narrative_stage": "problem_introduction",
+      "therapeutic_skill": "psychoeducation",
+      "therapeutic_elements": [
+        {
+          "element_type": "thought_bubble",
+          "content_description": "Racing anxious thoughts about not sleeping",
+          "therapeutic_purpose": "Illustrate cognitive component of insomnia",
+          "must_preserve": true
+        }
+      ],
+      "speech_bubbles": [],
+      "text_overlays": [
+        "I would lie awake worrying about the kids and work..."
+      ],
+      "locked_elements": [
+        "distressed emotional expression",
+        "bedroom at night setting",
+        "lying in bed pose",
+        "thought content"
+      ],
+      "adaptable_elements": [
+        "character demographics",
+        "bedroom decor",
+        "sleepwear style"
+      ],
+      "required_emotion_preservation": true,
+      "required_composition_preservation": true,
+      "requires_clinical_review": false
+    },
+    "transform_spec": {
+      "source_panel_id": "insomnia_L1_P3_bed_distress",
+      "target_variant": "gender_swap_female",
+      "character_transforms": {
+        "Leo": {
+          "gender": "female",
+          "new_name": "Leah",
+          "appearance_notes": "Transform to female presentation while preserving age, expression, and pose",
+          "preserve_emotion": "distressed",
+          "preserve_pose": "lying in bed, head on pillow, one hand raised to forehead"
+        }
+      },
+      "preserve_pose": true,
+      "preserve_expression_type": true,
+      "preserve_composition": true,
+      "preserve_lighting": true,
+      "preserve_therapeutic_elements": true,
+      "controlnet_mode": "lineart",
+      "controlnet_strength": 0.8,
+      "denoise_strength": 0.4,
+      "min_structural_similarity": 0.8,
+      "emotion_must_match": true
+    },
+    "prompts": {
+      "positive_prompt": "Professional illustration in clean vector style with consistent line weights, \nflat color fills with subtle gradients for shading, warm but professional color palette. \nStyle matches THIS WAY UP CBT course illustrations.\n\nScene:\nClinical therapy illustration depicting: Leo lying awake in bed at night, unable to sleep, showing distress\nSetting: bedroom at night, dark with bedside lamp glow\nLighting: dim nighttime, warm lamp light on face\nMood: frustrated, exhausted, anxious\n\nCharacters:\nLeah: female, middle_aged, expression showing distressed (tired eyes, furrowed brow, hand on forehead showing frustration), lying in bed, head on pillow, one hand raised to forehead, wearing sleepwear/t-shirt, positioned center\n\nTherapeutic elements to preserve:\nMUST INCLUDE: thought_bubble - Racing anxious thoughts about not sleeping",
+      "negative_prompt": "photorealistic, 3d render, photograph, blurry, low quality, \ndistorted faces, extra limbs, violence, gore, nsfw, weapons, blood, \nmedical emergency, self-harm, disturbing imagery, scary, horror",
+      "controlnet_prompt": "Use lineart ControlNet at strength 0.8.\nDenoise strength: 0.4\nPreserve exact composition and pose from source image.\nCharacter positions and spatial relationships must match source exactly.",
+      "validation_notes": "Structural similarity must be >= 0.8\nCharacter emotions must match source panel\nAll therapeutic elements must be present and correct\nComposition and pose must match source\nVerify character transformations applied: ['Leo']",
+      "generation_params": {
+        "controlnet_mode": "lineart",
+        "controlnet_strength": 0.8,
+        "denoise_strength": 0.4
+      }
+    },
+    "validation_prompt": "Compare the source and generated images for this therapy panel transformation.\n\n## Source Panel Description\nPanel: insomnia_L1_P3_bed_distress\nCategory: client_single\nScene: Leo lying awake in bed at night, unable to sleep, showing distress\nCharacters: Leo (distressed)\nTherapeutic elements: thought_bubble\nLocked elements: distressed emotional expression, bedroom at night setting, lying in bed pose, thought content\n\n## Intended Transformation\nVariant: gender_swap_female\nCharacter changes: {\n  \"Leo\": {\n    \"gender\": \"female\",\n    \"new_name\": \"Leah\",\n    \"appearance_notes\": \"Transform to female presentation while preserving age, expression, and pose\",\n    \"preserve_emotion\": \"distressed\",\n    \"preserve_pose\": \"lying in bed, head on pillow, one hand raised to forehead\"\n  }\n}\nControlNet mode: lineart\nExpected similarity: >= 0.8\n\n## Validation Checklist\n\n### 1. Structural Fidelity\n- Does the composition match the source? (character positions, scene layout)\n- Are all required elements present in the same locations?\n- Rate structural similarity: 0-100\n\n### 2. Character Transformation\n- Was the demographic transformation applied correctly?\n- Does the transformed character still convey the same emotion?\n- Is the pose preserved accurately?\n- Rate transformation accuracy: 0-100\n\n### 3. Therapeutic Element Preservation  \n- Are all therapeutic elements (thought bubbles, diagrams, etc.) present?\n- Is their content accurate and readable?\n- Rate therapeutic fidelity: 0-100\n\n### 4. Style Consistency\n- Does the output match the TWU illustration style?\n- Are line weights, colors, and shading consistent?\n- Rate style match: 0-100\n\n### 5. Clinical Safety\n- Any inappropriate or potentially harmful content?\n- Any unintended changes that could affect therapeutic message?\n- Pass/Fail with explanation\n\n### 6. Overall Assessment\n- Overall quality score: 0-100\n- Recommendation: APPROVE / REVISE / REJECT\n- Specific issues to address (if any)\n\nRespond in JSON format."
+  },
+  {
+    "panel_id": "insomnia_L1_P5_circadian_diagram",
+    "category": "conceptual_diagram",
+    "metadata": {
+      "panel_id": "insomnia_L1_P5_circadian_diagram",
+      "source_file": "lesson1_page-05.png",
+      "page_number": 5,
+      "panel_position": "top_left",
+      "category": "PanelCategory.CONCEPTUAL_DIAGRAM",
+      "scene_description": "Ian explaining circadian rhythm concept with clock diagram showing brain",
+      "setting": "therapy office",
+      "lighting": "indoor lighting",
+      "mood": "educational, explanatory",
+      "characters": [
+        {
+          "role": "CharacterRole.THERAPIST",
+          "name": "Ian",
+          "gender": "male",
+          "approximate_age": "older",
+          "emotion": "EmotionBand.NEUTRAL",
+          "expression_description": "explaining, educational expression",
+          "pose_description": "gesturing toward diagram",
+          "clothing_description": "light blue shirt, glasses",
+          "position_in_frame": "right",
+          "is_speaking": true
+        }
+      ],
+      "narrative_stage": "psychoeducation",
+      "therapeutic_skill": "psychoeducation",
+      "therapeutic_elements": [
+        {
+          "element_type": "diagram",
+          "content_description": "Circadian Rhythm clock showing 24-hour cycle with brain illustration",
+          "therapeutic_purpose": "Visual explanation of biological sleep regulation",
+          "must_preserve": true
+        }
+      ],
+      "speech_bubbles": [
+        "The second process that regulates your sleep is your Circadian Rhythm."
+      ],
+      "text_overlays": [
+        "Circadian Rhythm",
+        "11",
+        "12",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "locked_elements": [
+        "circadian rhythm diagram",
+        "clock numbers",
+        "brain illustration",
+        "educational content"
+      ],
+      "adaptable_elements": [
+        "therapist demographics"
+      ],
+      "required_emotion_preservation": true,
+      "required_composition_preservation": true,
+      "requires_clinical_review": true
+    },
+    "transform_spec": {
+      "source_panel_id": "insomnia_L1_P5_circadian_diagram",
+      "target_variant": "gender_swap_female",
+      "character_transforms": {},
+      "preserve_pose": true,
+      "preserve_expression_type": true,
+      "preserve_composition": true,
+      "preserve_lighting": true,
+      "preserve_therapeutic_elements": true,
+      "controlnet_mode": "canny",
+      "controlnet_strength": 0.9,
+      "denoise_strength": 0.3,
+      "min_structural_similarity": 0.85,
+      "emotion_must_match": true
+    },
+    "prompts": {
+      "positive_prompt": "Professional illustration in clean vector style with consistent line weights, \nflat color fills with subtle gradients for shading, warm but professional color palette. \nStyle matches THIS WAY UP CBT course illustrations.\n\nScene:\nClinical therapy illustration depicting: Ian explaining circadian rhythm concept with clock diagram showing brain\nSetting: therapy office\nLighting: indoor lighting\nMood: educational, explanatory\n\nCharacters:\nIan: male, older, expression showing neutral (explaining, educational expression), gesturing toward diagram, wearing light blue shirt, glasses, positioned right\n\nTherapeutic elements to preserve:\nMUST INCLUDE: diagram - Circadian Rhythm clock showing 24-hour cycle with brain illustration",
+      "negative_prompt": "photorealistic, 3d render, photograph, blurry, low quality, \ndistorted faces, extra limbs, violence, gore, nsfw, weapons, blood, \nmedical emergency, self-harm, disturbing imagery, scary, horror",
+      "controlnet_prompt": "Use canny ControlNet at strength 0.9.\nDenoise strength: 0.3\nPreserve exact composition and pose from source image.\nCharacter positions and spatial relationships must match source exactly.",
+      "validation_notes": "Structural similarity must be >= 0.85\nCharacter emotions must match source panel\nAll therapeutic elements must be present and correct\nComposition and pose must match source",
+      "generation_params": {
+        "controlnet_mode": "canny",
+        "controlnet_strength": 0.9,
+        "denoise_strength": 0.3
+      }
+    },
+    "validation_prompt": "Compare the source and generated images for this therapy panel transformation.\n\n## Source Panel Description\nPanel: insomnia_L1_P5_circadian_diagram\nCategory: conceptual_diagram\nScene: Ian explaining circadian rhythm concept with clock diagram showing brain\nCharacters: Ian (neutral)\nTherapeutic elements: diagram\nLocked elements: circadian rhythm diagram, clock numbers, brain illustration, educational content\n\n## Intended Transformation\nVariant: gender_swap_female\nCharacter changes: {}\nControlNet mode: canny\nExpected similarity: >= 0.85\n\n## Validation Checklist\n\n### 1. Structural Fidelity\n- Does the composition match the source? (character positions, scene layout)\n- Are all required elements present in the same locations?\n- Rate structural similarity: 0-100\n\n### 2. Character Transformation\n- Was the demographic transformation applied correctly?\n- Does the transformed character still convey the same emotion?\n- Is the pose preserved accurately?\n- Rate transformation accuracy: 0-100\n\n### 3. Therapeutic Element Preservation  \n- Are all therapeutic elements (thought bubbles, diagrams, etc.) present?\n- Is their content accurate and readable?\n- Rate therapeutic fidelity: 0-100\n\n### 4. Style Consistency\n- Does the output match the TWU illustration style?\n- Are line weights, colors, and shading consistent?\n- Rate style match: 0-100\n\n### 5. Clinical Safety\n- Any inappropriate or potentially harmful content?\n- Any unintended changes that could affect therapeutic message?\n- Pass/Fail with explanation\n\n### 6. Overall Assessment\n- Overall quality score: 0-100\n- Recommendation: APPROVE / REVISE / REJECT\n- Specific issues to address (if any)\n\nRespond in JSON format."
+  },
+  {
+    "panel_id": "insomnia_L1_P2_bedroom_domestic",
+    "category": "dialogue_domestic",
+    "metadata": {
+      "panel_id": "insomnia_L1_P2_bedroom_domestic",
+      "source_file": "lesson1_page-02.png",
+      "page_number": 2,
+      "panel_position": "middle",
+      "category": "PanelCategory.DIALOGUE_DOMESTIC",
+      "scene_description": "Leo and Ali in bedroom discussing his sleep problems",
+      "setting": "bedroom, morning or evening",
+      "lighting": "warm indoor domestic lighting",
+      "mood": "concerned, supportive, intimate domestic moment",
+      "characters": [
+        {
+          "role": "CharacterRole.CLIENT",
+          "name": "Leo",
+          "gender": "male",
+          "approximate_age": "middle_aged",
+          "emotion": "EmotionBand.STRUGGLING",
+          "expression_description": "tired, frustrated, explaining problem",
+          "pose_description": "sitting on edge of bed, shoulders slightly slumped",
+          "clothing_description": "casual home clothes, striped pajamas",
+          "position_in_frame": "left",
+          "is_speaking": true
+        },
+        {
+          "role": "CharacterRole.PARTNER",
+          "name": "Ali",
+          "gender": "female",
+          "approximate_age": "middle_aged",
+          "emotion": "EmotionBand.NEUTRAL",
+          "expression_description": "concerned, listening attentively, supportive",
+          "pose_description": "sitting on bed beside partner, turned toward him",
+          "clothing_description": "casual sleepwear",
+          "position_in_frame": "right",
+          "is_speaking": false
+        }
+      ],
+      "narrative_stage": "problem_introduction",
+      "therapeutic_skill": "psychoeducation",
+      "therapeutic_elements": [],
+      "speech_bubbles": [
+        "Another awful sleep - It's like I've lost my ability to sleep, Ali."
+      ],
+      "text_overlays": [],
+      "locked_elements": [
+        "domestic supportive dynamic",
+        "bedroom setting",
+        "concerned partner response"
+      ],
+      "adaptable_elements": [
+        "both character demographics",
+        "bedroom decor",
+        "clothing"
+      ],
+      "required_emotion_preservation": true,
+      "required_composition_preservation": true,
+      "requires_clinical_review": false
+    },
+    "transform_spec": {
+      "source_panel_id": "insomnia_L1_P2_bedroom_domestic",
+      "target_variant": "gender_swap_female",
+      "character_transforms": {
+        "Leo": {
+          "gender": "female",
+          "new_name": "Leah",
+          "appearance_notes": "Transform to female presentation while preserving age, expression, and pose",
+          "preserve_emotion": "struggling",
+          "preserve_pose": "sitting on edge of bed, shoulders slightly slumped"
+        }
+      },
+      "preserve_pose": true,
+      "preserve_expression_type": true,
+      "preserve_composition": true,
+      "preserve_lighting": true,
+      "preserve_therapeutic_elements": true,
+      "controlnet_mode": "openpose",
+      "controlnet_strength": 0.75,
+      "denoise_strength": 0.45,
+      "min_structural_similarity": 0.8,
+      "emotion_must_match": true
+    },
+    "prompts": {
+      "positive_prompt": "Professional illustration in clean vector style with consistent line weights, \nflat color fills with subtle gradients for shading, warm but professional color palette. \nStyle matches THIS WAY UP CBT course illustrations.\n\nScene:\nClinical therapy illustration depicting: Leo and Ali in bedroom discussing his sleep problems\nSetting: bedroom, morning or evening\nLighting: warm indoor domestic lighting\nMood: concerned, supportive, intimate domestic moment\n\nCharacters:\nLeah: female, middle_aged, expression showing struggling (tired, frustrated, explaining problem), sitting on edge of bed, shoulders slightly slumped, wearing casual home clothes, striped pajamas, positioned left\nAli: female, middle_aged, expression showing neutral (concerned, listening attentively, supportive), sitting on bed beside partner, turned toward him, wearing casual sleepwear, positioned right\n\nTherapeutic elements to preserve:\nNone specific",
+      "negative_prompt": "photorealistic, 3d render, photograph, blurry, low quality, \ndistorted faces, extra limbs, violence, gore, nsfw, weapons, blood, \nmedical emergency, self-harm, disturbing imagery, scary, horror",
+      "controlnet_prompt": "Use openpose ControlNet at strength 0.75.\nDenoise strength: 0.45\nPreserve exact composition and pose from source image.\nCharacter positions and spatial relationships must match source exactly.",
+      "validation_notes": "Structural similarity must be >= 0.8\nCharacter emotions must match source panel\nAll therapeutic elements must be present and correct\nComposition and pose must match source\nVerify character transformations applied: ['Leo']",
+      "generation_params": {
+        "controlnet_mode": "openpose",
+        "controlnet_strength": 0.75,
+        "denoise_strength": 0.45
+      }
+    },
+    "validation_prompt": "Compare the source and generated images for this therapy panel transformation.\n\n## Source Panel Description\nPanel: insomnia_L1_P2_bedroom_domestic\nCategory: dialogue_domestic\nScene: Leo and Ali in bedroom discussing his sleep problems\nCharacters: Leo (struggling), Ali (neutral)\nTherapeutic elements: \nLocked elements: domestic supportive dynamic, bedroom setting, concerned partner response\n\n## Intended Transformation\nVariant: gender_swap_female\nCharacter changes: {\n  \"Leo\": {\n    \"gender\": \"female\",\n    \"new_name\": \"Leah\",\n    \"appearance_notes\": \"Transform to female presentation while preserving age, expression, and pose\",\n    \"preserve_emotion\": \"struggling\",\n    \"preserve_pose\": \"sitting on edge of bed, shoulders slightly slumped\"\n  }\n}\nControlNet mode: openpose\nExpected similarity: >= 0.8\n\n## Validation Checklist\n\n### 1. Structural Fidelity\n- Does the composition match the source? (character positions, scene layout)\n- Are all required elements present in the same locations?\n- Rate structural similarity: 0-100\n\n### 2. Character Transformation\n- Was the demographic transformation applied correctly?\n- Does the transformed character still convey the same emotion?\n- Is the pose preserved accurately?\n- Rate transformation accuracy: 0-100\n\n### 3. Therapeutic Element Preservation  \n- Are all therapeutic elements (thought bubbles, diagrams, etc.) present?\n- Is their content accurate and readable?\n- Rate therapeutic fidelity: 0-100\n\n### 4. Style Consistency\n- Does the output match the TWU illustration style?\n- Are line weights, colors, and shading consistent?\n- Rate style match: 0-100\n\n### 5. Clinical Safety\n- Any inappropriate or potentially harmful content?\n- Any unintended changes that could affect therapeutic message?\n- Pass/Fail with explanation\n\n### 6. Overall Assessment\n- Overall quality score: 0-100\n- Recommendation: APPROVE / REVISE / REJECT\n- Specific issues to address (if any)\n\nRespond in JSON format."
+  }
+]
