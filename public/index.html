@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWU Re-Illustration Prototype</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .panel-item {
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .panel-item:hover {
+            border-color: var(--primary);
+            background: #f1f5f9;
+        }
+
+        .panel-item.selected {
+            border-color: var(--primary);
+            background: #eef2ff;
+        }
+
+        .panel-item h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .panel-item p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: #e0e7ff;
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        .badge.warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .variant-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .variant-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            background: var(--card);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .variant-btn:hover {
+            border-color: var(--primary);
+        }
+
+        .variant-btn.selected {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary);
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+        }
+
+        .output {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .loading {
+            display: none;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .loading.active {
+            display: flex;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--success);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .tab {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+
+        .tab:hover {
+            background: #f1f5f9;
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TWU Re-Illustration</h1>
+            <p class="subtitle">Adaptive demographic variants for THIS WAY UP therapy content</p>
+        </header>
+
+        <div class="card">
+            <div class="status">
+                <span class="status-dot"></span>
+                <span>API Connected</span>
+            </div>
+            <p style="color: var(--text-light); font-size: 0.9rem;">
+                This prototype demonstrates the pipeline for generating demographic variants of illustrated therapy panels.
+                Select a panel and variant type to see the transformation specification and generation prompts.
+            </p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>1. Select Panel</h2>
+                <div id="panels-list">
+                    <div class="loading active" id="panels-loading">
+                        <div class="spinner"></div>
+                        <span>Loading panels...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>2. Select Variant</h2>
+                <div class="section">
+                    <h3>Gender</h3>
+                    <div class="variant-grid" id="gender-variants"></div>
+                </div>
+                <div class="section">
+                    <h3>Ethnicity</h3>
+                    <div class="variant-grid" id="ethnicity-variants"></div>
+                </div>
+                <div class="section">
+                    <h3>Age</h3>
+                    <div class="variant-grid" id="age-variants"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Generate Transformation</h2>
+            <button class="btn" id="transform-btn" disabled>Generate Prompts</button>
+            <div class="loading" id="transform-loading" style="margin-top: 1rem;">
+                <div class="spinner"></div>
+                <span>Generating transformation...</span>
+            </div>
+        </div>
+
+        <div class="card" id="output-card" style="display: none;">
+            <h2>Output</h2>
+            <div class="tabs">
+                <button class="tab active" data-tab="spec">Transform Spec</button>
+                <button class="tab" data-tab="prompt">Generation Prompt</button>
+                <button class="tab" data-tab="validation">Validation</button>
+            </div>
+            <div class="output" id="output"></div>
+        </div>
+    </div>
+
+    <script>
+        let selectedPanel = null;
+        let selectedVariant = null;
+        let currentData = null;
+
+        // Fetch and display panels
+        async function loadPanels() {
+            try {
+                const response = await fetch('/api/panels');
+                const data = await response.json();
+
+                const container = document.getElementById('panels-list');
+                container.innerHTML = data.panels.map(panel => `
+                    <div class="panel-item" data-panel-id="${panel.panel_id}">
+                        <h3>${panel.panel_id}</h3>
+                        <p>${panel.scene_description}</p>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="badge">${panel.category}</span>
+                            ${panel.requires_clinical_review ? '<span class="badge warning">Clinical Review</span>' : ''}
+                        </div>
+                    </div>
+                `).join('');
+
+                // Add click handlers
+                container.querySelectorAll('.panel-item').forEach(item => {
+                    item.addEventListener('click', () => {
+                        container.querySelectorAll('.panel-item').forEach(i => i.classList.remove('selected'));
+                        item.classList.add('selected');
+                        selectedPanel = item.dataset.panelId;
+                        updateTransformButton();
+                    });
+                });
+            } catch (error) {
+                document.getElementById('panels-list').innerHTML = `<p style="color: red;">Error loading panels: ${error.message}</p>`;
+            }
+        }
+
+        // Fetch and display variants
+        async function loadVariants() {
+            try {
+                const response = await fetch('/api/variants');
+                const data = await response.json();
+
+                const groups = {
+                    gender: document.getElementById('gender-variants'),
+                    ethnicity: document.getElementById('ethnicity-variants'),
+                    age: document.getElementById('age-variants')
+                };
+
+                data.variants.forEach(variant => {
+                    const btn = document.createElement('button');
+                    btn.className = 'variant-btn';
+                    btn.textContent = variant.name;
+                    btn.title = variant.description;
+                    btn.dataset.variantId = variant.id;
+
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('selected'));
+                        btn.classList.add('selected');
+                        selectedVariant = variant.id;
+                        updateTransformButton();
+                    });
+
+                    groups[variant.type].appendChild(btn);
+                });
+            } catch (error) {
+                console.error('Error loading variants:', error);
+            }
+        }
+
+        function updateTransformButton() {
+            const btn = document.getElementById('transform-btn');
+            btn.disabled = !(selectedPanel && selectedVariant);
+        }
+
+        // Generate transformation
+        async function generateTransform() {
+            const btn = document.getElementById('transform-btn');
+            const loading = document.getElementById('transform-loading');
+
+            btn.disabled = true;
+            loading.classList.add('active');
+
+            try {
+                const response = await fetch('/api/transform', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        panel_id: selectedPanel,
+                        variant_type: selectedVariant
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                currentData = await response.json();
+                showOutput('spec');
+                document.getElementById('output-card').style.display = 'block';
+            } catch (error) {
+                alert('Error: ' + error.message);
+            } finally {
+                btn.disabled = false;
+                loading.classList.remove('active');
+            }
+        }
+
+        function showOutput(tab) {
+            if (!currentData) return;
+
+            const output = document.getElementById('output');
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[data-tab="${tab}"]`).classList.add('active');
+
+            switch (tab) {
+                case 'spec':
+                    output.textContent = JSON.stringify(currentData.transform_spec, null, 2);
+                    break;
+                case 'prompt':
+                    output.textContent = currentData.prompts.positive_prompt +
+                        '\n\n--- NEGATIVE PROMPT ---\n\n' +
+                        currentData.prompts.negative_prompt +
+                        '\n\n--- CONTROLNET ---\n\n' +
+                        currentData.prompts.controlnet_prompt;
+                    break;
+                case 'validation':
+                    output.textContent = currentData.validation_prompt;
+                    break;
+            }
+        }
+
+        // Event listeners
+        document.getElementById('transform-btn').addEventListener('click', generateTransform);
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => showOutput(tab.dataset.tab));
+        });
+
+        // Initialize
+        loadPanels();
+        loadVariants();
+    </script>
+</body>
+</html>
