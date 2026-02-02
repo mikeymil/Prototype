@@ -336,5 +336,6 @@ async def transform_panel(request: TransformRequest):
     }
 
 
-# Vercel handler
-handler = app
+# Vercel handler - use Mangum for ASGI compatibility
+from mangum import Mangum
+handler = Mangum(app)
